@@ -21,12 +21,12 @@ namespace Lab2SoftWare
         private void btnAdd_Click(object sender, EventArgs e)
         {
             int index = lbxContent.SelectedIndex;
-            string str = (string)lbxContent.Items[index];
+            string str1 = (string)lbxContent.Items[index];
             int len = str.Length;
             int count = 0;
-            for(int i = 0; i < len; i++) 
+            for(int j = 0; j < len; j++) 
             {
-                if (str[i] == ',' || str[i] == '.' || str[i] == '!' || str[i] == '?' || str[i] == ';' || str[i] == ':')
+                if (str1[j] == ',' || str1[j] == '.' || str1[j] == '!' || str1[j] == '?' || str1[j] == ';' || str1[j] == ':')
                     count++;
             }
             lResult.Text = "Количество знаков препинания = " + count.ToString();
